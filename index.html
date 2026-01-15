@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
 
-    <title>YJD Truck Dispatch Services | Best Freight Dispatchers in USA</title>
+    <title>uDrive Truck Dispatch Services | Best Freight Dispatchers in USA</title>
 
     <meta name="description"
-        content="YJD Truck Dispatch Services provides professional truck dispatching solutions across the USA. Dedicated dispatchers, best freight rates, no forced loads, 24/7 support, and hassle-free paperwork for owner-operators and fleet owners.">
+        content="uDrive Truck Dispatch Services provides professional truck dispatching solutions across the USA. Dedicated dispatchers, best freight rates, no forced loads, 24/7 support, and hassle-free paperwork for owner-operators and fleet owners.">
 
     <meta name="keywords" content="
 truck dispatch services,
@@ -105,7 +105,7 @@ truck dispatching company Wyoming
     <div class="container-fluid p-0 pb-5">
         <div class="owl-carousel header-carousel position-relative mb-5">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/hero-bg-1.gif" alt="">
+                <img class="img-fluid" src="img/hero.png" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(6, 3, 21, .5);">
                     <div class="container">
@@ -113,8 +113,12 @@ truck dispatching company Wyoming
                             <div class="col-10 col-lg-8">
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown tagline-font">Your
                                     ultimate dispatching partner</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">You Just Drive <br> 
-                                    <span class="different-color">The Rest We'll Handle</span></h1>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">
+                                    You Just Drive<br>
+                                    <span id="rotating-text" class="different-color">
+                                        We Handle All Paperwork
+                                    </span>
+                                </h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2 carousel-desc">We manage your dispatching
                                     operations end-to-end, ensuring efficient load booking, clear communication, and
                                     smooth day-to-day coordination. Our team helps keep your trucks moving while you
@@ -365,7 +369,7 @@ truck dispatching company Wyoming
                                         placeholder="Any other details you would like to share with us"></textarea>
                                 </div>
                                 <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
-                                <input type="hidden" name="_subject" value="YJD | Quote Request | Homepage">
+                                <input type="hidden" name="_subject" value="uDrive | Quote Request | Homepage">
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="hidden" name="_template" value="table">
                                 <div class="col-12">
@@ -390,7 +394,7 @@ truck dispatching company Wyoming
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>30 N Gould St #26590, Sheridan, WY, 82801,
                         USA</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+1 (332) 378-2702</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>yjd@septumsumus.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>udrive@septumsumus.com</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
@@ -409,9 +413,9 @@ truck dispatching company Wyoming
                     <a class="btn btn-link" href="#quote">Get a Quote</a>
                     <a class="btn btn-link" href="contact.html">Support</a>
                     <a target="_blank" class="btn btn-link"
-                        href="https://septumsumus.com/yjd/termsofservices?source=yjd">Terms & Services</a>
+                        href="https://septumsumus.com/uDrive/termsofservices?source=uDrive">Terms & Services</a>
                     <a target="_blank" class="btn btn-link"
-                        href="https://septumsumus.com/yjd/privacypolicy?source=yjd">Privacy Policy</a>
+                        href="https://septumsumus.com/uDrive/privacypolicy?source=uDrive">Privacy Policy</a>
                 </div>
             </div>
         </div>
@@ -419,8 +423,8 @@ truck dispatching company Wyoming
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; 2026 <a href="#">You Just Drive</a> | All Rights Reserved | A <a
-                            href="https://septumsumus.com/?source=yjd" class="footer__link" target="_blank">Septum
+                        &copy; 2026 <a href="#">uDrive</a> | All Rights Reserved | A <a
+                            href="https://septumsumus.com/?source=uDrive" class="footer__link" target="_blank">Septum
                             Sumus</a> brand
                     </div>
                 </div>
@@ -442,6 +446,42 @@ truck dispatching company Wyoming
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script>
+    const phrases = [
+        "We Handle All Paperwork",
+        "We Find and Book High-Paying Loads",
+        "We Negotiate Rates for You",
+        "Paperwork, Brokers, Compliance — Done",
+        "We Keep Your Wheels Moving",
+        "We Maximize Every Mile",
+        "More Miles. Better Rates.",
+        "Dispatching, Simplified",
+        "Stress-Free Dispatching",
+        "We Run the Business Side",
+        "You Focus on Driving",
+        "Loads Booked. Rates Negotiated.",
+        "Consistent Freight. Reliable Pay.",
+        "Everything — Covered",
+        "We Manage Brokers and Back Office",
+        "From Load Search to Invoicing",
+        "Professional Dispatch, Done Right",
+        "Less Downtime. More Revenue.",
+        "Built for Owner-Operators",
+        "Dispatch You Can Trust"
+    ];
+
+    let index = 0;
+    const textElement = document.getElementById("rotating-text");
+
+    setInterval(() => {
+        textElement.classList.remove("fade-in");
+        void textElement.offsetWidth; // forces reflow for animation reset
+        index = (index + 1) % phrases.length;
+        textElement.textContent = phrases[index];
+        textElement.classList.add("fade-in");
+    }, 3000);
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

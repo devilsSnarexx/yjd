@@ -5,9 +5,11 @@ body {
     font-family: 'Poppins', sans-serif !important;
 }
 
+/* FF3E41 */
+
 /********** Template CSS **********/
 :root {
-    --primary: #FF3E41;
+    --primary: #9c2d41;
     --secondary: #51CFED;
     --light: #F8F2F0;
     --dark: #060315;
@@ -544,4 +546,19 @@ body {
 .different-color {
     font-size: 2.8rem;
     color: #f70056;
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

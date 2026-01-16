@@ -484,6 +484,27 @@ truck dispatching company Wyoming
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdownBtn = document.querySelector(".select-equipment");
+        const checkboxes = document.querySelectorAll(".dropdown-menu input[type='checkbox']");
+
+        function updateButtonText() {
+            const selected = Array.from(checkboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.nextElementSibling.textContent.trim());
+
+            dropdownBtn.textContent = selected.length
+                ? selected.join(", ")
+                : "Select Your Equipment";
+        }
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener("change", updateButtonText);
+        });
+    });
+    </script>
 </body>
 
 </html>

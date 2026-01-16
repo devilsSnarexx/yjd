@@ -194,6 +194,12 @@ body {
         position: relative;
         min-height: 500px;
     }
+
+    .different-color {
+        font-size: 1.2rem !important;
+        margin: 10px 0px 25px 0px;
+        font-family: 'Exo', sans-serif !important;
+    }
     
     .header-carousel .owl-carousel-item img {
         position: absolute;
@@ -546,6 +552,7 @@ body {
 .different-color {
     font-size: 2.8rem;
     color: #f70056;
+    font-family: 'Exo', sans-serif !important;
 }
 
 .fade-in {
